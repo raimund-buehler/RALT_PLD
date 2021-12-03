@@ -256,6 +256,7 @@ var CycleInfo;
 var key_resp_6;
 var trial_2Clock;
 var fix_cross_2;
+var new_neutral_2_jpg;
 var response_training_2;
 var Stimulus_2;
 var left_disp_2;
@@ -804,6 +805,15 @@ function experimentInit() {
     depth: -1.0 
   });
   
+  new_neutral_2_jpg = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'new_neutral_2_jpg', units : 'height', 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0.225], size : [0.5, 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -2.0 
+  });
   response_training_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   Stimulus_2 = new visual.TextStim({
@@ -2893,8 +2903,6 @@ var filename_thisN_neutral;
 var filename_thisN_happy;
 var filename_thisN_angry;
 var stim_thisN;
-var new_neutral_2Clock;
-var new_neutral_2;
 var _response_training_2_allKeys;
 var trial_2Components;
 function trial_2RoutineBegin(snapshot) {
@@ -2911,19 +2919,7 @@ function trial_2RoutineBegin(snapshot) {
     stim_thisN = numbarray[BlockCounter][TrialCounter];
     console.log("stim_thisN:", stim_thisN);
     console.log("CorrDict[stim_thisN]:", CorrDict[stim_thisN]);
-    new_neutral_2Clock = new util.Clock();
-    new_neutral_2 = new visual.MovieStim({
-      win: psychoJS.window,
-      name: 'new_neutral_2',
-      units: 'height',
-      movie: filename_thisN_neutral,
-      pos: [0, 0.225],
-      size: [0.625, 0.5],
-      ori: 0,
-      opacity: 1,
-      loop: false,
-      noAudio: true,
-      });
+    new_neutral_2_jpg.setImage(filename_thisN_neutral);
     response_training_2.keys = undefined;
     response_training_2.rt = undefined;
     _response_training_2_allKeys = [];
@@ -2933,7 +2929,7 @@ function trial_2RoutineBegin(snapshot) {
     // keep track of which components have finished
     trial_2Components = [];
     trial_2Components.push(fix_cross_2);
-    trial_2Components.push(new_neutral_2);
+    trial_2Components.push(new_neutral_2_jpg);
     trial_2Components.push(response_training_2);
     trial_2Components.push(Stimulus_2);
     trial_2Components.push(left_disp_2);
@@ -2970,23 +2966,18 @@ function trial_2RoutineEachFrame(snapshot) {
       fix_cross_2.setAutoDraw(false);
     }
     
-    // *new_neutral_2* updates
-    if (t >= 1.0 && new_neutral_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *new_neutral_2_jpg* updates
+    if (t >= 1.0 && new_neutral_2_jpg.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      new_neutral_2.tStart = t;  // (not accounting for frame time here)
-      new_neutral_2.frameNStart = frameN;  // exact frame index
+      new_neutral_2_jpg.tStart = t;  // (not accounting for frame time here)
+      new_neutral_2_jpg.frameNStart = frameN;  // exact frame index
       
-      new_neutral_2.setAutoDraw(true);
-      new_neutral_2.play();
+      new_neutral_2_jpg.setAutoDraw(true);
     }
 
-    frameRemains = 1.0 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((new_neutral_2.status === PsychoJS.Status.STARTED || new_neutral_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      new_neutral_2.setAutoDraw(false);
-    }
-
-    if (new_neutral_2.status === PsychoJS.Status.FINISHED) {  // force-end the routine
-        continueRoutine = false;
+    frameRemains = 1.0 + 6.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((new_neutral_2_jpg.status === PsychoJS.Status.STARTED || new_neutral_2_jpg.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      new_neutral_2_jpg.setAutoDraw(false);
     }
     
     // *response_training_2* updates
@@ -3097,7 +3088,6 @@ function trial_2RoutineEnd(snapshot) {
             }
         }
     }
-    new_neutral_2.stop();
     // was no response the correct answer?!
     if (response_training_2.keys === undefined) {
       if (['None','none',undefined].includes(CorrCat)) {
@@ -3187,7 +3177,7 @@ function feedbackRoutineBegin(snapshot) {
       units: 'height',
       movie: filename_thisN_angry,
       pos: [0, 0.225],
-      size: [0.625, 0.5],
+      size: [0.5, 0.5],
       ori: 0,
       opacity: 1,
       loop: false,
@@ -3200,7 +3190,7 @@ function feedbackRoutineBegin(snapshot) {
       units: 'height',
       movie: filename_thisN_happy,
       pos: [0, 0.225],
-      size: [0.625, 0.5],
+      size: [0.5, 0.5],
       ori: 0,
       opacity: 1,
       loop: false,
