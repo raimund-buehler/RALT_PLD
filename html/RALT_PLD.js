@@ -2602,9 +2602,9 @@ function BlockCodeRoutineBegin(snapshot) {
     // update component parameters for each repeat
     if (Blocklist[BlockCounter] == "social") {
         //trial_file = "trials_social.xlsx";
-        filenames_noxl = [  ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/F01-Happy Women.mp4 ", "Stimuli/social/angry/F04-Angry Women.mp4"], 
+        filenames_noxl = [  ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/F01-Happy Women.mp4", "Stimuli/social/angry/F04-Angry Women.mp4"], 
                             ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/M02-Happy Man.mp4", "Stimuli/social/angry/M06-Angry Man.mp4"], 
-                            ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/F01-Happy Women.mp4 ", "Stimuli/social/angry/F04-Angry Women.mp4"], 
+                            ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/F01-Happy Women.mp4", "Stimuli/social/angry/F04-Angry Women.mp4"], 
                             ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/M02-Happy Man.mp4", "Stimuli/social/angry/M06-Angry Man.mp4"]];
     } else {
         if (Blocklist[BlockCounter] == "nonsocial") {
