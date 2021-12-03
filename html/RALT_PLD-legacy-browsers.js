@@ -2596,11 +2596,17 @@ function BlockCodeRoutineBegin(snapshot) {
     // update component parameters for each repeat
     if (Blocklist[BlockCounter] == "social") {
         //trial_file = "trials_social.xlsx";
-        filenames_noxl = [["ADFES/Freigestellt/Neutral/F01-Neutral-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Joy/Used/F01-Joy-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Anger/F01-Anger-Face Forward_freigestellt.mp4"], ["ADFES/Freigestellt/Neutral/F04-Neutral-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Joy/Used/F04-Joy-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Anger/F04-Anger-Face Forward_freigestellt.mp4"], ["ADFES/Freigestellt/Neutral/M06-Neutral-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Joy/Used/M06-Joy-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Anger/M06-Anger-Face Forward_freigestellt.mp4"], ["ADFES/Freigestellt/Neutral/M02-Neutral-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Joy/Used/M02-Joy-Face Forward_freigestellt.mp4", "ADFES/Freigestellt/Anger/M02-Anger-Face Forward_freigestellt.mp4"]];
+        filenames_noxl = [  ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/F01-Happy Women.mp4	", "Stimuli/social/angry/F04-Angry Women.mp4"], 
+                            ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/M02-Happy Man.mp4", "Stimuli/social/angry/M06-Angry Man.mp4"], 
+                            ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/F01-Happy Women.mp4	", "Stimuli/social/angry/F04-Angry Women.mp4"], 
+                            ["Stimuli/neutral/Still.jpg", "Stimuli/social/happy/M02-Happy Man.mp4", "Stimuli/social/angry/M06-Angry Man.mp4"]];
     } else {
         if (Blocklist[BlockCounter] == "nonsocial") {
             //trial_file = "trials_nonsocial.xlsx";
-            filenames_noxl = [["Mandalas_new/neutral/Mandala3_neutral.mp4", "Mandalas_new/happy/Mandala3_happy.mp4", "Mandalas_new/angry/Mandala3_angry.mp4"], ["Mandalas_new/neutral/Mandala2_neutral.mp4", "Mandalas_new/happy/Mandala2_happy.mp4", "Mandalas_new/angry/Mandala2_angry.mp4"], ["Mandalas_new/neutral/Mandala4_neutral.mp4", "Mandalas_new/happy/Mandala4_happy.mp4", "Mandalas_new/angry/Mandala4_angry.mp4"], ["Mandalas_new/neutral/Mandala1_neutral.mp4", "Mandalas_new/happy/Mandala1_happy.mp4", "Mandalas_new/angry/Mandala1_angry.mp4"]];
+            filenames_noxl = [  ["Stimuli/neutral/Still.jpg", "Stimuli/nonsocial/Right Tick.mp4", "Stimuli/nonsocial/Wrong Tick.mp4"], 
+                                ["Stimuli/neutral/Still.jpg", "Stimuli/nonsocial/Right Tick.mp4", "Stimuli/nonsocial/Wrong Tick.mp4"], 
+                                ["Stimuli/neutral/Still.jpg", "Stimuli/nonsocial/Right Tick.mp4", "Stimuli/nonsocial/Wrong Tick.mp4"], 
+                                ["Stimuli/neutral/Still.jpg", "Stimuli/nonsocial/Right Tick.mp4", "Stimuli/nonsocial/Wrong Tick.mp4"]];
         }
     }
     
