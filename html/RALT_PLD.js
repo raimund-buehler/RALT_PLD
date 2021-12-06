@@ -235,13 +235,13 @@ var left_disp_fb_2;
 var right_disp_fb_2;
 var Stimulus_fb_2;
 var Alles_klarClock;
-var Allesklar;
 var text_4;
 var key_resp_4;
 var instr_train_nsClock;
 var text;
 var key_resp_5;
 var Alles_Klar_2Clock;
+var Allesklar;
 var Allesklartext_2;
 var Allesklar_resp_2;
 var feedback_probClock;
@@ -331,7 +331,7 @@ function experimentInit() {
   text_3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_3',
-    text: "You are about to see a number at the bottom of the screen. \nYour task is to assign the number to either A or B using the arrow keys.\n\nThe correct assignment is completely random\nso you just have to guess at first.\n\nAdditionally, you will see a picture above the number.\nWhether you have chosen correctly\\n will be indicated by a change in the picture.\n\n\nLet's try a first round!",
+    text: "You are about to see a number at the bottom of the screen. \nYour task is to assign the number to either A or B using the arrow keys.\n\nThe correct assignment is completely random\nso you just have to guess at first.\n\nAdditionally, you will see a picture above the number.\nWhether you have chosen correctly will be indicated by a change in the picture.\n\n\nLet's try a first round!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -446,12 +446,12 @@ function experimentInit() {
   
   // Initialize components for Routine "Alles_klar"
   Alles_klarClock = new util.Clock();
-  Allesklar = centerfy("As you have seen, the picture changes according to your answer.\n\n Happy faces indicate a correct answer,\n while angry faces indicate a wrong answer.\n\n Later on, you should try to remember\n the correct assignment of the number. \n\nPicture and number are combined randomly\n and will be recombined later.\n\nSo you need to focus on the number while memorizing!\n\nPress any key to continue!");
+  
   
   text_4 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_4',
-    text: Allesklar,
+    text: 'As you have seen, the picture changes according to your answer.\nHappy faces indicate a correct answer, \nwhile angry faces indicate a wrong answer.\n\nLater on, you should try to remember the correct assignment of the number. \n\nPress any key to continue!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -463,12 +463,10 @@ function experimentInit() {
   
   // Initialize components for Routine "instr_train_ns"
   instr_train_nsClock = new util.Clock();
-  Allesklar = centerfy("In the next pass, you will see different pictures.\n\n But the principle remains the same:\n The picture changes according to a correct/wrong answer.\n\nLet's try it out!");
-  
   text = new visual.TextStim({
     win: psychoJS.window,
     name: 'text',
-    text: Allesklar,
+    text: "In the next pass, you will see different pictures. \n\nBut the principle remains the same\nThe picture changes according to a correct/wrong answer.\n\nLet's try it out!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -940,6 +938,8 @@ function WelcomeRoutineBegin(snapshot) {
     Welcome_head.setAlignHoriz('center')
     Welcome_text.setAlignHoriz('center')
     text_3.setAlignHoriz('center')
+    text_4.setAlignHoriz('center')
+    text.setAlignHoriz('center')
     key_resp_2.keys = undefined;
     key_resp_2.rt = undefined;
     _key_resp_2_allKeys = [];
