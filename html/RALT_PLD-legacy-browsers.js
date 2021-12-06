@@ -203,8 +203,6 @@ var WelcomeClock;
 var thisExp;
 var win;
 var event;
-var Welcome_heading;
-var Welcome;
 var instruction;
 var right_cat;
 var left_cat;
@@ -284,16 +282,6 @@ function experimentInit() {
   var font_choice = 'Helvetica';
   
   //Centered Text
-  Welcome_heading = "Thank you for participating in this experiment!"
-  
-  Welcome = ("You will be asked to assign \n different numbers to either A or B.\n "+
-  '\n'+
-  "You can do this by pressing the <- or -> arrow keys.\n "+
-  '\n'+
-  "Whether you have chosen correctly\n will be indicated by pictures.\n "+
-  '\n'+
-  "We'll start with some trial runs,\n so you can better understand the experiment.\n\n "+
-  'Press any key to continue!')
   
   instruction = ("You are about to see a number at the bottom of the screen. "+
   '\n\n'+
@@ -321,7 +309,7 @@ function experimentInit() {
   Welcome_head = new visual.TextStim({
     win: psychoJS.window,
     name: 'Welcome_head',
-    text: Welcome_heading,
+    text: 'Thank you for participating in this experiment!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0.3], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -332,7 +320,7 @@ function experimentInit() {
   Welcome_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'Welcome_text',
-    text: Welcome,
+    text: '"You will be asked to assign \\n different numbers to either A or B.\\n "+\n\'\\n\'+\n"You can do this by pressing the <- or -> arrow keys.\\n "+\n\'\\n\'+\n"Whether you have chosen correctly\\n will be indicated by pictures.\\n "+\n\'\\n\'+\n"We\'ll start with some trial runs,\\n so you can better understand the experiment.\\n\\n "+\n\'Press any key to continue!\'',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
