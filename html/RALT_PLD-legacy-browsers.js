@@ -320,7 +320,7 @@ function experimentInit() {
   Welcome_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'Welcome_text',
-    text: '"You will be asked to assign \\n different numbers to either A or B.\\n "+\n\'\\n\'+\n"You can do this by pressing the <- or -> arrow keys.\\n "+\n\'\\n\'+\n"Whether you have chosen correctly\\n will be indicated by pictures.\\n "+\n\'\\n\'+\n"We\'ll start with some trial runs,\\n so you can better understand the experiment.\\n\\n "+\n\'Press any key to continue!\'',
+    text: "You will be asked to assign \\n different numbers to either A or B.\nYou can do this by pressing the <- or -> arrow keys.\nWhether you have chosen correctly\\n will be indicated by pictures.\nWe'll start with some trial runs,\nso you can better understand the experiment.\n\n\nPress any key to continue!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,

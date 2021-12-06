@@ -159,7 +159,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="&quot;You will be asked to assign \n different numbers to either A or B.\n &quot;+&amp;#10;'\n'+&amp;#10;&quot;You can do this by pressing the &lt;- or -&gt; arrow keys.\n &quot;+&amp;#10;'\n'+&amp;#10;&quot;Whether you have chosen correctly\n will be indicated by pictures.\n &quot;+&amp;#10;'\n'+&amp;#10;&quot;We'll start with some trial runs,\n so you can better understand the experiment.\n\n &quot;+&amp;#10;'Press any key to continue!'" valType="str"/>
+        <Param name="text" updates="constant" val="You will be asked to assign \n different numbers to either A or B.&amp;#10;You can do this by pressing the &lt;- or -&gt; arrow keys.&amp;#10;Whether you have chosen correctly\n will be indicated by pictures.&amp;#10;We'll start with some trial runs,&amp;#10;so you can better understand the experiment.&amp;#10;&amp;#10;&amp;#10;Press any key to continue!" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="70" valType="code"/>
       </TextComponent>
