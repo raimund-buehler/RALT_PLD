@@ -203,7 +203,6 @@ var WelcomeClock;
 var thisExp;
 var win;
 var event;
-var instruction;
 var right_cat;
 var left_cat;
 var Welcome_head;
@@ -283,20 +282,6 @@ function experimentInit() {
   
   //Centered Text
   
-  instruction = ("You are about to see a number at the bottom of the screen. "+
-  '\n\n'+
-  'Your task is to assign the number to either A or B using the arrow keys. \n'+
-  '\n'+
-  'The correct assignment is completely random\n'+
-  'so you just have to guess at first.'+
-  '\n\n'+
-  'Additionally, you will see a picture above the number\n'+
-  'in this case a neutral face.'+
-  '\n\n'+
-  'Whether you have chosen correctly\n will be indicated by a change in the picture.'+
-  '\n\n\n'+
-  "Let's try a first round!")
-  
   if (randomChoice([true, false])) {
       right_cat = "A";
       left_cat = "B";
@@ -320,7 +305,7 @@ function experimentInit() {
   Welcome_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'Welcome_text',
-    text: "You will be asked to assign \\n different numbers to either A or B.\nYou can do this by pressing the <- or -> arrow keys.\nWhether you have chosen correctly\\n will be indicated by pictures.\nWe'll start with some trial runs,\nso you can better understand the experiment.\n\n\nPress any key to continue!",
+    text: "You will be asked to assign different numbers to either A or B.\nYou can do this by pressing the <- or -> arrow keys.\nWhether you have chosen correctly will be indicated by pictures.\nWe'll start with some trial runs,\nso you can better understand the experiment.\n\n\nPress any key to continue!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -335,7 +320,7 @@ function experimentInit() {
   text_3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_3',
-    text: instruction,
+    text: "You are about to see a number at the bottom of the screen. \nYour task is to assign the number to either A or B using the arrow keys.\n\nThe correct assignment is completely random\nso you just have to guess at first.\n\nAdditionally, you will see a picture above the number.\nWhether you have chosen correctly\\n will be indicated by a change in the picture.\n\n\nLet's try a first round!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
