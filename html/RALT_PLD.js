@@ -241,7 +241,6 @@ var instr_train_nsClock;
 var text;
 var key_resp_5;
 var Alles_Klar_2Clock;
-var Allesklar;
 var Allesklartext_2;
 var Allesklar_resp_2;
 var feedback_probClock;
@@ -316,7 +315,7 @@ function experimentInit() {
   Welcome_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'Welcome_text',
-    text: "You will be asked to assign different numbers to either A or B.\nYou can do this by pressing the <- or -> arrow keys.\nWhether you have chosen correctly will be indicated by pictures.\nWe'll start with some trial runs,\nso you can better understand the experiment.\n\n\nPress any key to continue!",
+    text: "You will be asked to assign different numbers to either A or B.\n\nYou can do this by pressing the <- or -> arrow keys.\nWhether you have chosen correctly will be indicated by pictures.\n\nWe'll start with some trial runs,\nso you can better understand the experiment.\n\n\nPress any key to continue!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -581,23 +580,12 @@ function experimentInit() {
   
   // Initialize components for Routine "Alles_Klar_2"
   Alles_Klar_2Clock = new util.Clock();
-  Allesklar = centerfy("As you have seen,\n " +
-  "the image changes again according to your answer.\n\nColorful, moving images " +
-  "indicate a correct answer,\n if you answer incorrectly, the image becomes " +
-  "gray and blurry.\n\nBut it won't be quite that simple in the real experiment!\n " +
-  "You will not always be able to rely on the pictures.\n" +
-  "Instead, if you answer correctly, you will \n" +
-  "MOSTLY see the happy faces or colorful fractals.\n " +
-  "\nThat is, even if you answered correctly, \n"+
-  "sometimes you may still see a frowning face or a gray fractal.\n "+ 
-  "In the next pass, text will indicate\n whether you answered correctly or incorrectly."+
-  "\n\nNote that text and image mostly, but not "+
-  "always, match.");
+  
   
   Allesklartext_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'Allesklartext_2',
-    text: Allesklar,
+    text: "As you have seen, the image changes again according to your answer.\nThis time, tickmarks indicate a correct answer, while a cross indicates a wrong answer. \n\nBut it won't be quite that simple in the real experiment!\nYou will not always be able to rely on the pictures.\n\nInstead, if you answer correctly, you will\nMOSTLY see the happy faces or tickmarks.\n\nThat is, even if you answered correctly,\nsometimes you may still see a frowning face or a cross.\n\nIn the next pass, text will indicate whether you answered correctly or incorrectly.\n\nNote that text and image mostly, but not always, match.",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -726,12 +714,12 @@ function experimentInit() {
   
   // Initialize components for Routine "Alles_Klar_3"
   Alles_Klar_3Clock = new util.Clock();
-  Allesklar = centerfy("In the last pass, the picture and text didn't match!\n But this will rarely happen in the real experiment.\n\nYou won't see the text below in the following.\n\nJust try to give the right answer as best you can!\n");
+  
   
   Allesklartext = new visual.TextStim({
     win: psychoJS.window,
     name: 'Allesklartext',
-    text: Allesklar,
+    text: "Did you notice? In the last pass, the picture and text didn't match!\n\nBut this will rarely happen in the real experiment.\n\nYou won't see the text below in the following.\n\nJust try to give the right answer as best you can!",
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
@@ -940,6 +928,8 @@ function WelcomeRoutineBegin(snapshot) {
     text_3.setAlignHoriz('center')
     text_4.setAlignHoriz('center')
     text.setAlignHoriz('center')
+    Allesklartext_2.setAlignHoriz('center')
+    Allesklartext.setAlignHoriz('center')
     key_resp_2.keys = undefined;
     key_resp_2.rt = undefined;
     _key_resp_2_allKeys = [];
