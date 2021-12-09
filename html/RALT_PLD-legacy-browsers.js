@@ -280,9 +280,9 @@ function experimentInit() {
   thisExp=psychoJS.experiment;
   win=psychoJS.window;
   event=psychoJS.eventManager;
-  win.color= new util.Color("white")
+  win.color= new util.Color("black")
   var font_choice = 'Helvetica';
-  var color_choice = 'black';
+  var color_choice = 'white';
   
   //Centered Text
   
