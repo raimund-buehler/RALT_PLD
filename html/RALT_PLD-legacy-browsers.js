@@ -384,7 +384,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: 'font_choice',
+    font: font_choice,
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('grey'),  opacity: 1,
@@ -519,7 +519,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: 'font_choice',
+    font: font_choice,
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('grey'),  opacity: 1,
@@ -639,7 +639,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: 'font_choice',
+    font: font_choice,
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('grey'),  opacity: 1,
@@ -1429,6 +1429,7 @@ function trialRoutineBegin(snapshot) {
     trialClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    routineTimer.add(7.000000);
     // update component parameters for each repeat
     neutral_still.setImage(filename_neutral);
     response_training.keys = undefined;
@@ -1536,6 +1537,10 @@ function trialRoutineEachFrame(snapshot) {
       Stimulus.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((Stimulus.status === PsychoJS.Status.STARTED || Stimulus.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      Stimulus.setAutoDraw(false);
+    }
     
     // *left_disp* updates
     if (t >= 1 && left_disp.status === PsychoJS.Status.NOT_STARTED) {
@@ -1546,6 +1551,10 @@ function trialRoutineEachFrame(snapshot) {
       left_disp.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((left_disp.status === PsychoJS.Status.STARTED || left_disp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      left_disp.setAutoDraw(false);
+    }
     
     // *right_disp* updates
     if (t >= 1 && right_disp.status === PsychoJS.Status.NOT_STARTED) {
@@ -1556,6 +1565,10 @@ function trialRoutineEachFrame(snapshot) {
       right_disp.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((right_disp.status === PsychoJS.Status.STARTED || right_disp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      right_disp.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1574,7 +1587,7 @@ function trialRoutineEachFrame(snapshot) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1624,9 +1637,6 @@ function trialRoutineEnd(snapshot) {
         }
     
     response_training.stop();
-    // the Routine "trial" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
