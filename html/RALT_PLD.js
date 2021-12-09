@@ -384,7 +384,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'left_disp',
     text: 'default text',
-    font: font_choice,
+    font: 'grey',
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color(color_choice),  opacity: 1,
@@ -395,7 +395,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: font_choice,
+    font: 'grey',
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color(color_choice),  opacity: 1,
@@ -519,7 +519,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'left_disp',
     text: 'default text',
-    font: font_choice,
+    font: 'grey',
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color(color_choice),  opacity: 1,
@@ -530,7 +530,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: font_choice,
+    font: 'grey',
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color(color_choice),  opacity: 1,
@@ -639,7 +639,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'left_disp',
     text: 'default text',
-    font: font_choice,
+    font: 'grey',
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color(color_choice),  opacity: 1,
@@ -650,7 +650,7 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: font_choice,
+    font: 'grey',
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color(color_choice),  opacity: 1,
@@ -1505,6 +1505,11 @@ function trialRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { response_training.start(); }); // start on screen flip
       psychoJS.window.callOnFlip(function() { response_training.clearEvents(); });
     }
+
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((response_training.status === PsychoJS.Status.STARTED || response_training.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      response_training.status = PsychoJS.Status.FINISHED;
+  }
 
     if (response_training.status === PsychoJS.Status.STARTED) {
       let theseKeys = response_training.getKeys({keyList: ['left', 'right'], waitRelease: false});
@@ -3053,6 +3058,11 @@ function trial_2RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { response_training_2.start(); }); // start on screen flip
       psychoJS.window.callOnFlip(function() { response_training_2.clearEvents(); });
     }
+
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((response_training_2.status === PsychoJS.Status.STARTED || response_training_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      response_training_2.status = PsychoJS.Status.FINISHED;
+  }
 
     if (response_training_2.status === PsychoJS.Status.STARTED) {
       let theseKeys = response_training_2.getKeys({keyList: ['left', 'right'], waitRelease: false});
