@@ -291,7 +291,9 @@ function experimentInit() {
   thisExp=psychoJS.experiment;
   win=psychoJS.window;
   event=psychoJS.eventManager;
+  win.color= new util.Color("white")
   var font_choice = 'Helvetica';
+  var color_choice = 'black';
   
   //Centered Text
   
@@ -311,7 +313,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0.3], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -2.0 
   });
   
@@ -322,7 +324,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -3.0 
   });
   
@@ -337,7 +339,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: 0.0 
   });
   
@@ -352,7 +354,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -374,7 +376,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -4.0 
   });
   
@@ -385,7 +387,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('grey'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -5.0 
   });
   
@@ -396,7 +398,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('grey'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -409,7 +411,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: 0.0 
   });
   
@@ -442,7 +444,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -457,7 +459,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -472,7 +474,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -487,7 +489,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -509,7 +511,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -4.0 
   });
   
@@ -520,7 +522,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('grey'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -5.0 
   });
   
@@ -531,7 +533,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('grey'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -544,7 +546,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: 0.0 
   });
   
@@ -577,7 +579,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -592,7 +594,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -607,7 +609,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -629,7 +631,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -4.0 
   });
   
@@ -640,7 +642,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('grey'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -5.0 
   });
   
@@ -651,7 +653,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('grey'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -667,7 +669,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -700,7 +702,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -708,10 +710,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'Prob_feedback',
     text: 'default text',
-    font: 'Arial',
+    font: font_choice,
     units: undefined, 
     pos: [0, (- 0.25)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -7.0 
   });
   
@@ -726,7 +728,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -759,7 +761,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -770,7 +772,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -2.0 
   });
   
@@ -781,7 +783,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -3.0 
   });
   
@@ -792,7 +794,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -4.0 
   });
   
@@ -807,7 +809,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -829,7 +831,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -4.0 
   });
   
@@ -868,7 +870,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -1.0 
   });
   
@@ -901,7 +903,7 @@ function experimentInit() {
     font: font_choice,
     units: undefined, 
     pos: [0, (- 0.15)], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: -6.0 
   });
   
@@ -928,10 +930,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'Thank',
     text: 'Thank you for your participation!',
-    font: 'Lucida Console',
+    font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.035,  wrapWidth: 70, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: 0.0 
   });
   
@@ -1655,12 +1657,12 @@ function feedback_trainRoutineBegin(snapshot) {
     }
     time_miss = 0;
     if ((response_training.keys == "left")) {
-        left_color = "black";
+        left_color = color_choice;
         right_color = "grey";
     } else {
         if ((response_training.keys == "right")) {
             left_color = "grey";
-            right_color = "black";
+            right_color = color_choice;
         } else {
             if ((response_training.keys == null)) {
                 left_color = "grey";
@@ -2246,12 +2248,12 @@ function feedback_probRoutineBegin(snapshot) {
     
     time_miss = 0;
     if ((response_training.keys == "left")) {
-        left_color = "black";
+        left_color = color_choice;
         right_color = "grey";
     } else {
         if ((response_training.keys == "right")) {
             left_color = "grey";
-            right_color = "black";
+            right_color = color_choice;
         } else {
             if ((response_training.keys == null)) {
                 left_color = "grey";
@@ -3213,12 +3215,12 @@ function feedbackRoutineBegin(snapshot) {
     }
     time_miss = 0;
     if ((response_training_2.keys == "left")) {
-        left_color = "black";
+        left_color = color_choice;
         right_color = "grey";
     } else {
         if ((response_training_2.keys == "right")) {
             left_color = "grey";
-            right_color = "black";
+            right_color = color_choice;
         } else {
             if ((response_training_2.keys == null)) {
                 left_color = "grey";
