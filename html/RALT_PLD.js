@@ -21,7 +21,7 @@ const psychoJS = new PsychoJS({
 // open window:
 psychoJS.openWindow({
   fullscr: false,
-  color: new util.Color([1, 1, 1]),
+  color: new util.Color([0, 0, 0]),
   units: 'height',
   waitBlanking: true
 });
@@ -291,7 +291,7 @@ function experimentInit() {
   thisExp=psychoJS.experiment;
   win=psychoJS.window;
   event=psychoJS.eventManager;
-  win.color= new util.Color("black")
+  //win.color= new util.Color("black")
   var font_choice = 'Helvetica';
   var color_choice = 'white';
   
