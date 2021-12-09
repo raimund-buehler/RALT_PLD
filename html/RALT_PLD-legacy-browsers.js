@@ -1184,7 +1184,7 @@ function training_socialLoopBegin(training_socialLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   training_social = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_social.xlsx', '0:4'),
     seed: undefined, name: 'training_social'
@@ -1222,7 +1222,7 @@ function training_nonsocialLoopBegin(training_nonsocialLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   training_nonsocial = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_nonsocial.xlsx', '0:4'),
     seed: undefined, name: 'training_nonsocial'
@@ -1260,7 +1260,7 @@ function prob_fbLoopBegin(prob_fbLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   prob_fb = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_social_prob.xlsx', '0:4'),
     seed: undefined, name: 'prob_fb'
@@ -2751,7 +2751,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         //right_cat.toString()) + " left_cat: ") + 
         //left_cat.toString()) + 
     if (((BlockCounter == 0) && (CycleCounter == 0))) {
-        CycleText1_dur = Null
+        CycleText1_dur = null
         CycleText2_dur = 0
         CycleText3_dur = 0
         CycleText4_dur = 0
@@ -2768,7 +2768,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
     } else {
         if (([0, 1, 2, 3].includes(BlockCounter)) && (CycleCounter == 1)) {
             CycleText1_dur = 0
-            CycleText2_dur = Null
+            CycleText2_dur = null
             CycleText3_dur = 0
             CycleText4_dur = 0
             CycleText = centerfy(
@@ -2784,7 +2784,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
             if (([0, 1, 2, 3].includes(BlockCounter)) && ([2, 3, 4, 5].includes(CycleCounter))) {
                 CycleText1_dur = 0
                 CycleText2_dur = 0
-                CycleText3_dur = Null
+                CycleText3_dur = null
                 CycleText4_dur = 0
                 CycleText = centerfy(
                 "Very good!\n\n" +
@@ -2799,7 +2799,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
                     CycleText1_dur = 0
                     CycleText2_dur = 0
                     CycleText3_dur = 0
-                    CycleText4_dur = Null
+                    CycleText4_dur = null
                     CycleText = centerfy(
                     "You have now completed a full block.\n\n" + 
                     "In the next block you will see different images.\n" +
