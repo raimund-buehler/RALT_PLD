@@ -768,7 +768,7 @@ function experimentInit() {
   CycleText3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'CycleText3',
-    text: 'Very good!\n\nYou have completed another pass!\n\nThere are still  + (6 - CycleCounter).toString() +\nmore passes,\nin which you will be shown all the numbers again.\n\nPress any key,\nto start the next run.',
+    text: 'default text',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
@@ -779,7 +779,7 @@ function experimentInit() {
   CycleText4 = new visual.TextStim({
     win: psychoJS.window,
     name: 'CycleText4',
-    text: 'You have now completed a full block.\n\nIn the next block you will see different images.\n\nInstead of checkmarks/crosses you will now see faces (or vice versa).\n\nThe principle remains the same.\n\nThere are still + (4- BlockCounter).toString() +\nmore blocks.\n\nWhen you are ready\npress any button,\nto start the next block.',
+    text: 'You have now completed a full block.\n\nIn the next block you will see different images.\n\nInstead of checkmarks/crosses you will now see faces (or vice versa).\n\nThe principle remains the same.\n\nThere are 4 blocks in total.\n\nWhen you are ready\npress any button,\nto start the next block.',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
@@ -1186,7 +1186,7 @@ function training_socialLoopBegin(training_socialLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   training_social = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_social.xlsx', '0:4'),
     seed: undefined, name: 'training_social'
@@ -1224,7 +1224,7 @@ function training_nonsocialLoopBegin(training_nonsocialLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   training_nonsocial = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_nonsocial.xlsx', '0:4'),
     seed: undefined, name: 'training_nonsocial'
@@ -1262,7 +1262,7 @@ function prob_fbLoopBegin(prob_fbLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   prob_fb = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_social_prob.xlsx', '0:4'),
     seed: undefined, name: 'prob_fb'
@@ -2833,6 +2833,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         }
     }
     
+    CycleText3.setText('Very good! You have completed another cycle! There are 6 cycles in total. \nPress any key, to start the next one.’');
     key_resp_6.keys = undefined;
     key_resp_6.rt = undefined;
     _key_resp_6_allKeys = [];

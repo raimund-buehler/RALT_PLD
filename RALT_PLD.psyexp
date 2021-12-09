@@ -311,7 +311,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="$CycleText3_dur" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Very good!&amp;#10;&amp;#10;You have completed another pass!&amp;#10;&amp;#10;There are still  + (6 - CycleCounter).toString() +&amp;#10;more passes,&amp;#10;in which you will be shown all the numbers again.&amp;#10;&amp;#10;Press any key,&amp;#10;to start the next run." valType="extendedStr"/>
+        <Param name="text" updates="set every repeat" val="Very good! You have completed another cycle! There are 6 cycles in total. &amp;#10;Press any key, to start the next one.’" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -335,7 +335,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="$CycleText4_dur" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You have now completed a full block.&amp;#10;&amp;#10;In the next block you will see different images.&amp;#10;&amp;#10;Instead of checkmarks/crosses you will now see faces (or vice versa).&amp;#10;&amp;#10;The principle remains the same.&amp;#10;&amp;#10;There are still + (4- BlockCounter).toString() +&amp;#10;more blocks.&amp;#10;&amp;#10;When you are ready&amp;#10;press any button,&amp;#10;to start the next block." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="You have now completed a full block.&amp;#10;&amp;#10;In the next block you will see different images.&amp;#10;&amp;#10;Instead of checkmarks/crosses you will now see faces (or vice versa).&amp;#10;&amp;#10;The principle remains the same.&amp;#10;&amp;#10;There are 4 blocks in total.&amp;#10;&amp;#10;When you are ready&amp;#10;press any button,&amp;#10;to start the next block." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -671,7 +671,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
         <Param name="name" updates="None" val="feedback_miss2" valType="code"/>
@@ -1548,7 +1548,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
         <Param name="name" updates="None" val="feedback_miss2_3" valType="code"/>
@@ -1802,7 +1802,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="training_social" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -1818,7 +1818,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="training_nonsocial" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -1833,7 +1833,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="prob_fb" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
