@@ -373,10 +373,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'left_disp',
     text: 'default text',
-    font: 'grey',
+    font: font_choice,
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color(color_choice),  opacity: 1,
+    color: new util.Color('grey'),  opacity: 1,
     depth: -5.0 
   });
   
@@ -384,10 +384,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: 'grey',
+    font: 'font_choice',
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color(color_choice),  opacity: 1,
+    color: new util.Color('grey'),  opacity: 1,
     depth: -6.0 
   });
   
@@ -508,10 +508,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'left_disp',
     text: 'default text',
-    font: 'grey',
+    font: font_choice,
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color(color_choice),  opacity: 1,
+    color: new util.Color('grey'),  opacity: 1,
     depth: -5.0 
   });
   
@@ -519,10 +519,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: 'grey',
+    font: 'font_choice',
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color(color_choice),  opacity: 1,
+    color: new util.Color('grey'),  opacity: 1,
     depth: -6.0 
   });
   
@@ -628,10 +628,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'left_disp',
     text: 'default text',
-    font: 'grey',
+    font: font_choice,
     units: undefined, 
     pos: [(- 0.5), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color(color_choice),  opacity: 1,
+    color: new util.Color('grey'),  opacity: 1,
     depth: -5.0 
   });
   
@@ -639,10 +639,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'right_disp',
     text: 'default text',
-    font: 'grey',
+    font: 'font_choice',
     units: undefined, 
     pos: [0.5, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color(color_choice),  opacity: 1,
+    color: new util.Color('grey'),  opacity: 1,
     depth: -6.0 
   });
   
