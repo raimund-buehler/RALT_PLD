@@ -20,7 +20,7 @@ const psychoJS = new PsychoJS({
 
 // open window:
 psychoJS.openWindow({
-  fullscr: false,
+  fullscr: true,
   color: new util.Color([0, 0, 0]),
   units: 'height',
   waitBlanking: true
@@ -1657,12 +1657,12 @@ function feedback_trainRoutineBegin(snapshot) {
     }
     time_miss = 0;
     if ((response_training.keys == "left")) {
-        left_color = color_choice;
+        left_color = "white";
         right_color = "grey";
     } else {
         if ((response_training.keys == "right")) {
             left_color = "grey";
-            right_color = color_choice;
+            right_color = "white";
         } else {
             if ((response_training.keys == null)) {
                 left_color = "grey";
@@ -2248,12 +2248,12 @@ function feedback_probRoutineBegin(snapshot) {
     
     time_miss = 0;
     if ((response_training.keys == "left")) {
-        left_color = color_choice;
+        left_color = "white";
         right_color = "grey";
     } else {
         if ((response_training.keys == "right")) {
             left_color = "grey";
-            right_color = color_choice;
+            right_color = "white";
         } else {
             if ((response_training.keys == null)) {
                 left_color = "grey";
@@ -3215,12 +3215,12 @@ function feedbackRoutineBegin(snapshot) {
     }
     time_miss = 0;
     if ((response_training_2.keys == "left")) {
-        left_color = color_choice;
+        left_color = "white";
         right_color = "grey";
     } else {
         if ((response_training_2.keys == "right")) {
             left_color = "grey";
-            right_color = color_choice;
+            right_color = "white";
         } else {
             if ((response_training_2.keys == null)) {
                 left_color = "grey";
