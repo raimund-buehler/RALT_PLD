@@ -2833,7 +2833,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         }
     }
     
-    CycleText3.setText('Very good! You have completed another cycle! There are 6 cycles in total. \nPress any key, to start the next one.’');
+    CycleText3.setText('Very good! You have completed another cycle! \n\nThere are 6 cycles in total. \n\nPress any key, to start the next one.');
     key_resp_6.keys = undefined;
     key_resp_6.rt = undefined;
     _key_resp_6_allKeys = [];

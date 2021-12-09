@@ -311,7 +311,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="$CycleText3_dur" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="Very good! You have completed another cycle! There are 6 cycles in total. &amp;#10;Press any key, to start the next one.’" valType="extendedStr"/>
+        <Param name="text" updates="set every repeat" val="Very good! You have completed another cycle! &amp;#10;&amp;#10;There are 6 cycles in total. &amp;#10;&amp;#10;Press any key, to start the next one." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
