@@ -422,12 +422,12 @@
     </Routine>
     <Routine name="Intertrial_Interval">
       <TextComponent name="text_2">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="constant" val="$color_choice" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
         <Param name="name" updates="None" val="text_2" valType="code"/>

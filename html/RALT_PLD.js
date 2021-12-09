@@ -913,10 +913,10 @@ function experimentInit() {
     win: psychoJS.window,
     name: 'text_2',
     text: '+',
-    font: 'Arial',
+    font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color(color_choice),  opacity: 1,
     depth: 0.0 
   });
   
