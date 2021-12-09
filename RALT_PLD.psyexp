@@ -207,7 +207,7 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="CycleText = ''" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="CycleText = &quot;&quot;;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="/*function randomChoice(arr) {&amp;#10;  return arr[Math.floor(Math.random() * arr.length)];&amp;#10;}*/&amp;#10;&amp;#10;if (randomChoice([true, false])) {&amp;#10;    right_cat = &quot;A&quot;;&amp;#10;    left_cat = &quot;B&quot;;&amp;#10;} else {&amp;#10;    left_cat = &quot;A&quot;;&amp;#10;    right_cat = &quot;B&quot;;&amp;#10;}&amp;#10;&amp;#10;console.log(&quot;BlockCounter:&quot; + BlockCounter)&amp;#10;shuffle(numbarray[BlockCounter]);&amp;#10;console.log(&quot;numbarray[BlockCounter]:&quot;, numbarray[BlockCounter]);&amp;#10;shuffle(filenames_noxl);&amp;#10;console.log(filenames_noxl);&amp;#10;console.log(&quot;Cycletext for next block cond: &quot;, + ((BlockCounter in [1, 2, 3]) &amp;&amp; (CycleCounter == 0)))&amp;#10;&amp;#10;//&quot;blocks:&quot; + BlockCounter.toString()) + &amp;#10;    //&quot;, cycles:&quot;) + CycleCounter.toString()) + &quot;\nright_cat: &quot;) + &amp;#10;    //right_cat.toString()) + &quot; left_cat: &quot;) + &amp;#10;    //left_cat.toString()) + &amp;#10;if (((BlockCounter == 0) &amp;&amp; (CycleCounter == 0))) {&amp;#10;    CycleText = centerfy(&amp;#10;    &quot;\n\nWe are now starting the first block.\n\n&quot; +&amp;#10;    &quot;Everything works exactly as in the training runs.&quot; +&amp;#10;    &quot;\n\nIn the first pass you must \n&quot; +&amp;#10;    &quot;guess the assignment with the arrow keys.\n\n&quot; +&amp;#10;    &quot;But try to memorize the correct assignment!\n&quot; +&amp;#10;    &quot;In total, you will see 4 different numbers.\n&quot; + &amp;#10;    &quot;After that, there will be a short pause. \n\n&quot; +&amp;#10;    &quot;Press any key, \n &quot; +&amp;#10;    &quot;to start the first block!\n&quot;);&amp;#10;} else {&amp;#10;    if (([0, 1, 2, 3].includes(BlockCounter)) &amp;&amp; (CycleCounter == 1)) {&amp;#10;        CycleText = centerfy(&amp;#10;       &quot;You have now seen all the numbers in this block \n&quot; +&amp;#10;        &quot;a first time.\n\nPause for a moment!\n\n&quot; +&amp;#10;        &quot;You will be shown all the numbers again in a moment.\n&quot; + &amp;#10;        &quot;Try to match the numbers correctly.\n\n&quot; +&amp;#10;        &quot;Notice that the pictures and numbers have been recombined.\n&quot; +&amp;#10;        &quot;A and B might also have switched places!\n\n&quot; +&amp;#10;        &quot;Press any key,\n&quot; +&amp;#10;        &quot;to start the next pass.&quot;);&amp;#10;    } else {&amp;#10;        if (([0, 1, 2, 3].includes(BlockCounter)) &amp;&amp; ([2, 3, 4, 5].includes(CycleCounter))) {&amp;#10;            CycleText = centerfy(&amp;#10;            &quot;Very good!\n\n&quot; +&amp;#10;            &quot;You have completed another pass!\n\n&quot; +&amp;#10;            &quot;There are still &quot; + (6 - CycleCounter).toString() +&amp;#10;            &quot; more passes,\n&quot; +&amp;#10;            &quot;in which you will be shown all the numbers again.\n\n&quot; +&amp;#10;            &quot;Press any key,\n &quot;+ &amp;#10;            &quot;to start the next run.&quot;);&amp;#10;        } else {&amp;#10;            if (([1, 2, 3].includes(BlockCounter)) &amp;&amp; (CycleCounter == 0)) {&amp;#10;                CycleText = centerfy(&amp;#10;                &quot;You have now completed a full block.\n\n&quot; + &amp;#10;                &quot;In the next block you will see different images.\n&quot; +&amp;#10;                &quot;Instead of fractals you will now see faces.\n&quot; +&amp;#10;                &quot;(or vice versa).\n\n&quot; + &amp;#10;                &quot;The principle remains the same.\n\n&quot; +&amp;#10;                &quot;There are still &quot; + (4- BlockCounter).toString() +&amp;#10;                &quot; more blocks.\n\n&quot; +&amp;#10;                &quot;When you are ready \n &quot; +&amp;#10;                &quot;press any button,\n&quot; +&amp;#10;                &quot;to start the next block.\n&quot;);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="/*function randomChoice(arr) {&amp;#10;  return arr[Math.floor(Math.random() * arr.length)];&amp;#10;}*/&amp;#10;&amp;#10;if (randomChoice([true, false])) {&amp;#10;    right_cat = &quot;A&quot;;&amp;#10;    left_cat = &quot;B&quot;;&amp;#10;} else {&amp;#10;    left_cat = &quot;A&quot;;&amp;#10;    right_cat = &quot;B&quot;;&amp;#10;}&amp;#10;&amp;#10;console.log(&quot;BlockCounter:&quot; + BlockCounter)&amp;#10;shuffle(numbarray[BlockCounter]);&amp;#10;console.log(&quot;numbarray[BlockCounter]:&quot;, numbarray[BlockCounter]);&amp;#10;shuffle(filenames_noxl);&amp;#10;console.log(filenames_noxl);&amp;#10;console.log(&quot;Cycletext for next block cond: &quot;, + ((BlockCounter in [1, 2, 3]) &amp;&amp; (CycleCounter == 0)))&amp;#10;&amp;#10;//&quot;blocks:&quot; + BlockCounter.toString()) + &amp;#10;    //&quot;, cycles:&quot;) + CycleCounter.toString()) + &quot;\nright_cat: &quot;) + &amp;#10;    //right_cat.toString()) + &quot; left_cat: &quot;) + &amp;#10;    //left_cat.toString()) + &amp;#10;if (((BlockCounter == 0) &amp;&amp; (CycleCounter == 0))) {&amp;#10;    CycleText1_dur = Null&amp;#10;    CycleText2_dur = 0&amp;#10;    CycleText3_dur = 0&amp;#10;    CycleText4_dur = 0&amp;#10;    CycleText = centerfy(&amp;#10;    &quot;\n\nWe are now starting the first block.\n\n&quot; +&amp;#10;    &quot;Everything works exactly as in the training runs.&quot; +&amp;#10;    &quot;\n\nIn the first pass you must \n&quot; +&amp;#10;    &quot;guess the assignment with the arrow keys.\n\n&quot; +&amp;#10;    &quot;But try to memorize the correct assignment!\n&quot; +&amp;#10;    &quot;In total, you will see 4 different numbers.\n&quot; + &amp;#10;    &quot;After that, there will be a short pause. \n\n&quot; +&amp;#10;    &quot;Press any key, \n &quot; +&amp;#10;    &quot;to start the first block!\n&quot;);&amp;#10;} else {&amp;#10;    if (([0, 1, 2, 3].includes(BlockCounter)) &amp;&amp; (CycleCounter == 1)) {&amp;#10;        CycleText1_dur = 0&amp;#10;        CycleText2_dur = Null&amp;#10;        CycleText3_dur = 0&amp;#10;        CycleText4_dur = 0&amp;#10;        CycleText = centerfy(&amp;#10;       &quot;You have now seen all the numbers in this block \n&quot; +&amp;#10;        &quot;a first time.\n\nPause for a moment!\n\n&quot; +&amp;#10;        &quot;You will be shown all the numbers again in a moment.\n&quot; + &amp;#10;        &quot;Try to match the numbers correctly.\n\n&quot; +&amp;#10;        &quot;Notice that the pictures and numbers have been recombined.\n&quot; +&amp;#10;        &quot;A and B might also have switched places!\n\n&quot; +&amp;#10;        &quot;Press any key,\n&quot; +&amp;#10;        &quot;to start the next pass.&quot;);&amp;#10;    } else {&amp;#10;        if (([0, 1, 2, 3].includes(BlockCounter)) &amp;&amp; ([2, 3, 4, 5].includes(CycleCounter))) {&amp;#10;            CycleText1_dur = 0&amp;#10;            CycleText2_dur = 0&amp;#10;            CycleText3_dur = Null&amp;#10;            CycleText4_dur = 0&amp;#10;            CycleText = centerfy(&amp;#10;            &quot;Very good!\n\n&quot; +&amp;#10;            &quot;You have completed another pass!\n\n&quot; +&amp;#10;            &quot;There are still &quot; + (6 - CycleCounter).toString() +&amp;#10;            &quot; more passes,\n&quot; +&amp;#10;            &quot;in which you will be shown all the numbers again.\n\n&quot; +&amp;#10;            &quot;Press any key,\n &quot;+ &amp;#10;            &quot;to start the next run.&quot;);&amp;#10;        } else {&amp;#10;            if (([1, 2, 3].includes(BlockCounter)) &amp;&amp; (CycleCounter == 0)) {&amp;#10;                CycleText1_dur = 0&amp;#10;                CycleText2_dur = 0&amp;#10;                CycleText3_dur = 0&amp;#10;                CycleText4_dur = Null&amp;#10;                CycleText = centerfy(&amp;#10;                &quot;You have now completed a full block.\n\n&quot; + &amp;#10;                &quot;In the next block you will see different images.\n&quot; +&amp;#10;                &quot;Instead of fractals you will now see faces.\n&quot; +&amp;#10;                &quot;(or vice versa).\n\n&quot; + &amp;#10;                &quot;The principle remains the same.\n\n&quot; +&amp;#10;                &quot;There are still &quot; + (4- BlockCounter).toString() +&amp;#10;                &quot; more blocks.\n\n&quot; +&amp;#10;                &quot;When you are ready \n &quot; +&amp;#10;                &quot;press any button,\n&quot; +&amp;#10;                &quot;to start the next block.\n&quot;);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="#randomize lateralization of A and B each cycle&amp;#10;if choice([True, False]):&amp;#10;    right_cat = &quot;A&quot;&amp;#10;    left_cat = &quot;B&quot;&amp;#10;else:&amp;#10;    left_cat = &quot;A&quot;&amp;#10;    right_cat = &quot;B&quot;&amp;#10;    &amp;#10;#shuffe stimuli per cycle&amp;#10;random.shuffle(numbarray[blocks.thisRepN])&amp;#10;print(&quot;numbarray[blocks.thisRepN]:&quot;, numbarray[blocks.thisRepN])&amp;#10;#shuffle filenames per cycle&amp;#10;random.shuffle(filenames_noxl)&amp;#10;print(filenames_noxl)&amp;#10;&amp;#10;###IRRELEVANT&amp;#10;#randomize picture/number association each cycle&amp;#10;'''&amp;#10;random.shuffle(filenames)&amp;#10;&amp;#10;for row in range(2,6):&amp;#10;    index = 0&amp;#10;    for column in &quot;BCD&quot;:  #Here you can add or reduce the columns&amp;#10;        cell_name = &quot;{}{}&quot;.format(column, row)&amp;#10;        sheet[cell_name].value = filenames[row-2][index]# the value of the specific cell&amp;#10;        index += 1&amp;#10;&amp;#10;book.save(filename = trial_file)&amp;#10;'''&amp;#10;&amp;#10;#Define Text, dependent on Block and Cycle&amp;#10;if blocks.thisN == 0 and cycles.thisRepN == 0:&amp;#10;    CycleText = centerfy(&amp;#10;    'blocks:' + str(blocks.thisN) + ', cycles:' + str(cycles.thisRepN) + '\n'&amp;#10;    'right_cat: ' + str(right_cat) + ' left_cat: ' + str(left_cat) + '\n\n'&amp;#10;    'Wir beginnen nun mit dem ersten Block.\n\n' &amp;#10;    'Alles funktioniert genau wie in den Trainingsdurchläufen.\n\n'&amp;#10;    'Im ersten Durchgang müssen Sie \n die Zuordnung mit den Pfeiltasten raten.\n\n'&amp;#10;    'Versuchen Sie aber, sich die richtige Zuordnung \n '&amp;#10;    'genau einzuprägen!\n'&amp;#10;    'Insgesamt werden sie 4 verschiedene Zahlen sehen,\n danach gibt es eine kurze Pause.\n\n'&amp;#10;    'Wenn Sie keine Fragen mehr haben, \n drücken Sie eine beliebige Taste, \n um den ersten Block zu starten!\n'&amp;#10;    )&amp;#10;elif blocks.thisN in [0, 1, 2, 3] and cycles.thisRepN == 1:&amp;#10;    CycleText = centerfy(&amp;#10;    'blocks:' + str(blocks.thisN) + ', cycles:' + str(cycles.thisRepN) + '\n'&amp;#10;    'right_cat: ' + str(right_cat) + ' left_cat: ' + str(left_cat) + '\n\n'&amp;#10;    'Sie haben nun alle Zahlen in diesem Block \n ein erstes Mal gesehen.\n\n'&amp;#10;    'Machen Sie kurz Pause!\n\n'&amp;#10;    'Sie werden gleich erneut alle Zahlen gezeigt bekommen.\n' &amp;#10;    'Versuchen Sie, die Zahlen richtig zuzuordnen.\n\n'&amp;#10;    'Beachten Sie, dass Bilder und Zahlen\n' &amp;#10;    'nun neu kombiniert wurden.\n\n'&amp;#10;    'Drücken Sie eine beliebige Taste,\n'&amp;#10;    'um den nächsten Durchgang zu starten.'&amp;#10;    )&amp;#10;elif blocks.thisN in [0, 1, 2, 3] and cycles.thisRepN in [2, 3, 4, 5, 6, 7, 8]:&amp;#10;    CycleText = centerfy(&amp;#10;    'blocks:' + str(blocks.thisN) + ', cycles:' + str(cycles.thisRepN) + '\n'&amp;#10;    'right_cat: ' + str(right_cat) + ' left_cat: ' + str(left_cat) + '\n\n'&amp;#10;    'Sehr gut!\n\n'&amp;#10;    'Sie haben einen weiteren Durchgang abgeschlossen!\n\n'&amp;#10;    'Es folgen noch ' + str(cycles.nRemaining + 1) + ' weitere Durchgänge,\n'&amp;#10;    'in denen Sie wieder jeweils alle Zahlen gezeigt bekommen.\n\n'&amp;#10;    'Drücken Sie eine beliebige Taste, \n'&amp;#10;    'um den nächsten Durchgang zu starten.'&amp;#10;    )&amp;#10;elif blocks.thisN in [1, 2, 3] and cycles.thisRepN == 0:&amp;#10;    CycleText = centerfy(&amp;#10;    'blocks:' + str(blocks.thisN) + ', cycles:' + str(cycles.thisRepN) + '\n'&amp;#10;    'right_cat: ' + str(right_cat) + ' left_cat: ' + str(left_cat) + '\n\n'&amp;#10;    'Sie haben nun einen  vollständigen Block abgeschlossen.\n\n'&amp;#10;    'Im nächsten Block werden andere Bilder angezeigt.\n'&amp;#10;    'Statt Fraktalen werden Sie nun Gesichter sehen\n'&amp;#10;    '(oder umgekehrt).\n\n'&amp;#10;    'Das Prinzip bleibt gleich.\n\n'&amp;#10;    'Es folgen noch ' + str(blocks.nRemaining + 1) + ' weitere Blöcke.\n\n'&amp;#10;    'Wenn Sie bereit sind, \n drücken Sie eine beliebige Taste,\n'&amp;#10;    'um den nächsten Block zu starten.\n'&amp;#10;    )" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
@@ -222,7 +222,7 @@
       <TextComponent name="CycleInfo">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="$font_choice" valType="str"/>
@@ -240,6 +240,102 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="set every repeat" val="$CycleText" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="CycleText1">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.025" valType="code"/>
+        <Param name="name" updates="None" val="CycleText1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$CycleText1_dur" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="We are now starting the first block.&amp;#10;&amp;#10;Everything works exactly as in the training runs.&amp;#10;&amp;#10;In the first pass you must&amp;#10;guess the assignment with the arrow keys.&amp;#10;But try to memorize the correct assignment!&amp;#10;&amp;#10;In total, you will see 4 different numbers.&amp;#10;After that, there will be a short pause.&amp;#10;&amp;#10;&amp;#10;Press any key,&amp;#10;to start the first block!" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="CycleText2">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.025" valType="code"/>
+        <Param name="name" updates="None" val="CycleText2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$CycleText2_dur" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You have now seen all the numbers in this block a first time.&amp;#10;&amp;#10;Pause for a moment!&amp;#10;&amp;#10;You will be shown all the numbers again in a moment.&amp;#10;&amp;#10;Note that A and B might have switched places!&amp;#10;&amp;#10;Try to match the numbers correctly.&amp;#10;&amp;#10;&amp;#10;Press any key,&amp;#10;to start the next pass." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="CycleText3">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.025" valType="code"/>
+        <Param name="name" updates="None" val="CycleText3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$CycleText3_dur" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Very good!&amp;#10;&amp;#10;You have completed another pass!&amp;#10;&amp;#10;There are still  + (6 - CycleCounter).toString() +&amp;#10;more passes,&amp;#10;in which you will be shown all the numbers again.&amp;#10;&amp;#10;Press any key,&amp;#10;to start the next run." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="CycleText4">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="$font_choice" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.025" valType="code"/>
+        <Param name="name" updates="None" val="CycleText4" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$CycleText4_dur" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You have now completed a full block.&amp;#10;&amp;#10;In the next block you will see different images.&amp;#10;&amp;#10;Instead of checkmarks/crosses you will now see faces (or vice versa).&amp;#10;&amp;#10;The principle remains the same.&amp;#10;&amp;#10;There are still + (4- BlockCounter).toString() +&amp;#10;more blocks.&amp;#10;&amp;#10;When you are ready&amp;#10;press any button,&amp;#10;to start the next block." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>

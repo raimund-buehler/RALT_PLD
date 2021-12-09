@@ -259,7 +259,10 @@ var BlockCodeClock;
 var Blocklist;
 var LateralizationByCycleClock;
 var CycleText;
-var CycleInfo;
+var CycleText1;
+var CycleText2;
+var CycleText3;
+var CycleText4;
 var key_resp_6;
 var trial_2Clock;
 var fix_cross_2;
@@ -749,15 +752,48 @@ function experimentInit() {
   LateralizationByCycleClock = new util.Clock();
   CycleText = "";
   
-  CycleInfo = new visual.TextStim({
+  CycleText1 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'CycleInfo',
-    text: 'default text',
+    name: 'CycleText1',
+    text: 'We are now starting the first block.\n\nEverything works exactly as in the training runs.\n\nIn the first pass you must\nguess the assignment with the arrow keys.\nBut try to memorize the correct assignment!\n\nIn total, you will see 4 different numbers.\nAfter that, there will be a short pause.\n\n\nPress any key,\nto start the first block!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
+  });
+  
+  CycleText2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'CycleText2',
+    text: 'You have now seen all the numbers in this block a first time.\n\nPause for a moment!\n\nYou will be shown all the numbers again in a moment.\n\nNote that A and B might have switched places!\n\nTry to match the numbers correctly.\n\n\nPress any key,\nto start the next pass.',
+    font: font_choice,
+    units: undefined, 
+    pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  CycleText3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'CycleText3',
+    text: 'Very good!\n\nYou have completed another pass!\n\nThere are still  + (6 - CycleCounter).toString() +\nmore passes,\nin which you will be shown all the numbers again.\n\nPress any key,\nto start the next run.',
+    font: font_choice,
+    units: undefined, 
+    pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -3.0 
+  });
+  
+  CycleText4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'CycleText4',
+    text: 'You have now completed a full block.\n\nIn the next block you will see different images.\n\nInstead of checkmarks/crosses you will now see faces (or vice versa).\n\nThe principle remains the same.\n\nThere are still + (4- BlockCounter).toString() +\nmore blocks.\n\nWhen you are ready\npress any button,\nto start the next block.',
+    font: font_choice,
+    units: undefined, 
+    pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -4.0 
   });
   
   key_resp_6 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -2672,6 +2708,10 @@ function BlockCodeRoutineEnd(snapshot) {
 }
 
 
+var CycleText1_dur;
+var CycleText2_dur;
+var CycleText3_dur;
+var CycleText4_dur;
 var _key_resp_6_allKeys;
 var LateralizationByCycleComponents;
 function LateralizationByCycleRoutineBegin(snapshot) {
@@ -2706,6 +2746,10 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         //right_cat.toString()) + " left_cat: ") + 
         //left_cat.toString()) + 
     if (((BlockCounter == 0) && (CycleCounter == 0))) {
+        CycleText1_dur = Null
+        CycleText2_dur = 0
+        CycleText3_dur = 0
+        CycleText4_dur = 0
         CycleText = centerfy(
         "\n\nWe are now starting the first block.\n\n" +
         "Everything works exactly as in the training runs." +
@@ -2718,6 +2762,10 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         "to start the first block!\n");
     } else {
         if (([0, 1, 2, 3].includes(BlockCounter)) && (CycleCounter == 1)) {
+            CycleText1_dur = 0
+            CycleText2_dur = Null
+            CycleText3_dur = 0
+            CycleText4_dur = 0
             CycleText = centerfy(
            "You have now seen all the numbers in this block \n" +
             "a first time.\n\nPause for a moment!\n\n" +
@@ -2729,6 +2777,10 @@ function LateralizationByCycleRoutineBegin(snapshot) {
             "to start the next pass.");
         } else {
             if (([0, 1, 2, 3].includes(BlockCounter)) && ([2, 3, 4, 5].includes(CycleCounter))) {
+                CycleText1_dur = 0
+                CycleText2_dur = 0
+                CycleText3_dur = Null
+                CycleText4_dur = 0
                 CycleText = centerfy(
                 "Very good!\n\n" +
                 "You have completed another pass!\n\n" +
@@ -2739,6 +2791,10 @@ function LateralizationByCycleRoutineBegin(snapshot) {
                 "to start the next run.");
             } else {
                 if (([1, 2, 3].includes(BlockCounter)) && (CycleCounter == 0)) {
+                    CycleText1_dur = 0
+                    CycleText2_dur = 0
+                    CycleText3_dur = 0
+                    CycleText4_dur = Null
                     CycleText = centerfy(
                     "You have now completed a full block.\n\n" + 
                     "In the next block you will see different images.\n" +
@@ -2755,13 +2811,15 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         }
     }
     
-    CycleInfo.setText(CycleText);
     key_resp_6.keys = undefined;
     key_resp_6.rt = undefined;
     _key_resp_6_allKeys = [];
     // keep track of which components have finished
     LateralizationByCycleComponents = [];
-    LateralizationByCycleComponents.push(CycleInfo);
+    LateralizationByCycleComponents.push(CycleText1);
+    LateralizationByCycleComponents.push(CycleText2);
+    LateralizationByCycleComponents.push(CycleText3);
+    LateralizationByCycleComponents.push(CycleText4);
     LateralizationByCycleComponents.push(key_resp_6);
     
     for (const thisComponent of LateralizationByCycleComponents)
@@ -2780,15 +2838,61 @@ function LateralizationByCycleRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *CycleInfo* updates
-    if (t >= 0.0 && CycleInfo.status === PsychoJS.Status.NOT_STARTED) {
+    // *CycleText1* updates
+    if (t >= 0.0 && CycleText1.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      CycleInfo.tStart = t;  // (not accounting for frame time here)
-      CycleInfo.frameNStart = frameN;  // exact frame index
+      CycleText1.tStart = t;  // (not accounting for frame time here)
+      CycleText1.frameNStart = frameN;  // exact frame index
       
-      CycleInfo.setAutoDraw(true);
+      CycleText1.setAutoDraw(true);
     }
 
+    frameRemains = 0.0 + CycleText1_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((CycleText1.status === PsychoJS.Status.STARTED || CycleText1.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      CycleText1.setAutoDraw(false);
+    }
+    
+    // *CycleText2* updates
+    if (t >= 0.0 && CycleText2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      CycleText2.tStart = t;  // (not accounting for frame time here)
+      CycleText2.frameNStart = frameN;  // exact frame index
+      
+      CycleText2.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + CycleText2_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((CycleText2.status === PsychoJS.Status.STARTED || CycleText2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      CycleText2.setAutoDraw(false);
+    }
+    
+    // *CycleText3* updates
+    if (t >= 0.0 && CycleText3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      CycleText3.tStart = t;  // (not accounting for frame time here)
+      CycleText3.frameNStart = frameN;  // exact frame index
+      
+      CycleText3.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + CycleText3_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((CycleText3.status === PsychoJS.Status.STARTED || CycleText3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      CycleText3.setAutoDraw(false);
+    }
+    
+    // *CycleText4* updates
+    if (t >= 0.0 && CycleText4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      CycleText4.tStart = t;  // (not accounting for frame time here)
+      CycleText4.frameNStart = frameN;  // exact frame index
+      
+      CycleText4.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + CycleText4_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((CycleText4.status === PsychoJS.Status.STARTED || CycleText4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      CycleText4.setAutoDraw(false);
+    }
     
     // *key_resp_6* updates
     if (t >= 0.0 && key_resp_6.status === PsychoJS.Status.NOT_STARTED) {
