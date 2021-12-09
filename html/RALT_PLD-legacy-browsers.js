@@ -2751,7 +2751,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         //right_cat.toString()) + " left_cat: ") + 
         //left_cat.toString()) + 
     if (((BlockCounter == 0) && (CycleCounter == 0))) {
-        CycleText1_dur = null
+        CycleText1_dur = undefined
         CycleText2_dur = 0
         CycleText3_dur = 0
         CycleText4_dur = 0
@@ -2768,7 +2768,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
     } else {
         if (([0, 1, 2, 3].includes(BlockCounter)) && (CycleCounter == 1)) {
             CycleText1_dur = 0
-            CycleText2_dur = null
+            CycleText2_dur = undefined
             CycleText3_dur = 0
             CycleText4_dur = 0
             CycleText = centerfy(
@@ -2784,7 +2784,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
             if (([0, 1, 2, 3].includes(BlockCounter)) && ([2, 3, 4, 5].includes(CycleCounter))) {
                 CycleText1_dur = 0
                 CycleText2_dur = 0
-                CycleText3_dur = null
+                CycleText3_dur = undefined
                 CycleText4_dur = 0
                 CycleText = centerfy(
                 "Very good!\n\n" +
@@ -2799,7 +2799,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
                     CycleText1_dur = 0
                     CycleText2_dur = 0
                     CycleText3_dur = 0
-                    CycleText4_dur = null
+                    CycleText4_dur = undefined
                     CycleText = centerfy(
                     "You have now completed a full block.\n\n" + 
                     "In the next block you will see different images.\n" +
