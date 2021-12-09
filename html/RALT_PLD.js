@@ -2990,6 +2990,7 @@ function trial_2RoutineBegin(snapshot) {
     trial_2Clock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    routineTimer.add(7.000000);
     // update component parameters for each repeat
     filename_thisN_neutral = filenames_noxl[TrialCounter][0];
     filename_thisN_happy = filenames_noxl[TrialCounter][1];
@@ -3101,6 +3102,10 @@ function trial_2RoutineEachFrame(snapshot) {
       Stimulus_2.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((Stimulus_2.status === PsychoJS.Status.STARTED || Stimulus_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      Stimulus_2.setAutoDraw(false);
+    }
     
     // *left_disp_2* updates
     if (t >= 1 && left_disp_2.status === PsychoJS.Status.NOT_STARTED) {
@@ -3111,6 +3116,10 @@ function trial_2RoutineEachFrame(snapshot) {
       left_disp_2.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((left_disp_2.status === PsychoJS.Status.STARTED || left_disp_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      left_disp_2.setAutoDraw(false);
+    }
     
     // *right_disp_2* updates
     if (t >= 1 && right_disp_2.status === PsychoJS.Status.NOT_STARTED) {
@@ -3121,6 +3130,10 @@ function trial_2RoutineEachFrame(snapshot) {
       right_disp_2.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((right_disp_2.status === PsychoJS.Status.STARTED || right_disp_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      right_disp_2.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -3139,7 +3152,7 @@ function trial_2RoutineEachFrame(snapshot) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -3187,9 +3200,6 @@ function trial_2RoutineEnd(snapshot) {
         }
     
     response_training_2.stop();
-    // the Routine "trial_2" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
