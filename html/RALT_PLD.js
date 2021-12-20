@@ -1195,7 +1195,7 @@ function training_socialLoopBegin(training_socialLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   training_social = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_social.xlsx', '0:4'),
     seed: undefined, name: 'training_social'
@@ -1232,7 +1232,7 @@ function training_nonsocialLoopBegin(training_nonsocialLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   training_nonsocial = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_nonsocial.xlsx', '0:4'),
     seed: undefined, name: 'training_nonsocial'
@@ -1269,7 +1269,7 @@ function prob_fbLoopBegin(prob_fbLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   prob_fb = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'trainingtrials_social_prob.xlsx', '0:4'),
     seed: undefined, name: 'prob_fb'
