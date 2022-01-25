@@ -396,7 +396,7 @@ function experimentInit() {
   feedback_miss = new visual.TextStim({
     win: psychoJS.window,
     name: 'feedback_miss',
-    text: 'BITTE RECHTZEITIG DRÜCKEN!',
+    text: 'PLEASE RESPOND FASTER!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -531,7 +531,7 @@ function experimentInit() {
   feedback_miss = new visual.TextStim({
     win: psychoJS.window,
     name: 'feedback_miss',
-    text: 'BITTE RECHTZEITIG DRÜCKEN!',
+    text: 'PLEASE RESPOND FASTER!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -654,7 +654,7 @@ function experimentInit() {
   feedback_miss2_3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'feedback_miss2_3',
-    text: 'BITTE RECHTZEITIG DRÜCKEN!',
+    text: 'PLEASE RESPOND FASTER!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -855,7 +855,7 @@ function experimentInit() {
   feedback_miss2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'feedback_miss2',
-    text: 'BITTE RECHTZEITIG DRÜCKEN!',
+    text: 'PLEASE RESPOND FASTER!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0.225], height: 0.05,  wrapWidth: undefined, ori: 0,
