@@ -3229,11 +3229,13 @@ function feedbackRoutineBegin(snapshot) {
     if ((((response_training_2.keys == "left") && (CorrDict[stim_thisN] == left_cat)) || ((response_training_2.keys == "right") && (CorrDict[stim_thisN] == right_cat)))) {
         if(weighted_random([true, false], [0.85, 0.15])){
             //congruent
+            thisExp.addData("Congr/Incongr", "Congruent")
             console.log("Congruent image!")
             time_h = 6.0;
             time_a = 0.0;
         } else {
             //incongruent
+            thisExp.addData("Congr/Incongr", "Incongruent")
             console.log("Incongruent image!")
             time_h = 0.0;
             time_a = 6.0;
