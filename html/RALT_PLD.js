@@ -131,7 +131,7 @@ for (let i = 1; i <= 2; i++) {
     CorrCat.push(ABlist);
 }
 
-fN = numbarray.slice(0,2).flat()
+var fN = numbarray.slice(0,2).flat()
 
 //Set up dict with correct category for lookup
 var CorrDict = {};
