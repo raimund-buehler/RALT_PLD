@@ -106,8 +106,8 @@ function randomUniqueNum(min, max, even, outputCount) {
 }
 
 //generate random numbers
-var fNeven = randomUniqueNum(10,99, even = true, 4)
-var fNodd = randomUniqueNum(10,99, even = false, 4)
+var fNeven = randomUniqueNum(10,99, true, 4)
+var fNodd = randomUniqueNum(10,99, false, 4)
 
 var numbarray = [fNeven, fNodd, fNeven, fNodd]
 
