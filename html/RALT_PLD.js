@@ -93,11 +93,17 @@ var CycleCounter = 0;
 var TrialCounter = 0;
 
 
-function randomUniqueNum(min, max, outputCount) {
+function randomUniqueNum(min, max, even, outputCount) {
 
     let arr = []
-    for (let i = min; i <= max; i++) {
-      arr.push(i)
+    if (even == true){
+      for (let i = min; i <= max; i+=2) {
+        arr.push(i)
+      }
+    } else {
+      for (let i = min + 1; i <= max; i+=2) {
+        arr.push(i)
+      }
     }
 
     let result = [];
@@ -109,9 +115,12 @@ function randomUniqueNum(min, max, outputCount) {
   
     return result;
 }
+
 //generate random numbers
-var fN = randomUniqueNum(10, 99, 16);
-var numbarray = [fN.slice(0, 4), fN.slice(4, 8), fN.slice(8, 12), fN.slice(12, 16)];
+var fNeven = randomUniqueNum(10,99, even = true, 4)
+var fNodd = randomUniqueNum(10,99, even = false, 4)
+
+var numbarray = [fNeven, fNodd, fNeven, fNodd]
 
 //Set up list with correct category (4 per cycle * 4 blocks, randomized)
 var CorrCat = [];
@@ -757,7 +766,7 @@ function experimentInit() {
   CycleText1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'CycleText1',
-    text: 'We are now starting the first block.\n\nEverything works exactly as in the training runs.\n\nIn the first pass you must\nguess the assignment with the arrow keys.\nBut try to memorize the correct assignment!\n\nIn total, you will see 4 different numbers.\nAfter that, there will be a short pause.\n\n\nPress any key,\nto start the first block!',
+    text: 'We are now starting the first block.\n\nIn the first pass you must\nguess the assignment with the arrow keys.\nTry to memorize the correct assignment!\n\nIn total, you will see 4 different numbers.\nAfter that, there will be a short pause.\n\n\nPress any key,\nto start the first block!',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
@@ -768,7 +777,7 @@ function experimentInit() {
   CycleText2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'CycleText2',
-    text: 'You have now seen all the numbers in this block a first time.\n\nPause for a moment!\n\nYou will be shown all the numbers again in a moment.\n\nNote that A and B might have switched places!\n\nTry to match the numbers correctly.\n\n\nPress any key,\nto start the next pass.',
+    text: 'PAUSE\n\nPress any key,\nto start the next pass.\n\n(A and B might have switched places!)',
     font: font_choice,
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: undefined, ori: 0,
@@ -2828,7 +2837,7 @@ function LateralizationByCycleRoutineBegin(snapshot) {
         }
     }
     
-    CycleText3.setText('Very good! You have completed another cycle! \n\nThere are 6 cycles in total. \n\nPress any key, to start the next one.');
+    CycleText3.setText('PAUSE\n\nPress any key, to start the next cycle.');
     key_resp_6.keys = undefined;
     key_resp_6.rt = undefined;
     _key_resp_6_allKeys = [];
