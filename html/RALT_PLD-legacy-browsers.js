@@ -114,11 +114,13 @@ var numbarray = [fNeven, fNodd, fNeven, fNodd]
 //Set up list with correct category (4 per cycle * 4 blocks, randomized)
 var CorrCat = [];
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 2; i++) {
     var ABlist = ["A", "A", "B", "B"];
     shuffle(ABlist);
     CorrCat.push(ABlist);
 }
+
+fN = numbarray.slice(0,2).flat()
 
 //Set up dict with correct category for lookup
 var CorrDict = {};
