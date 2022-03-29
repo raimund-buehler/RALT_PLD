@@ -3264,7 +3264,7 @@ function feedbackRoutineBegin(snapshot) {
         } else {
             //incongruent
             console.log("Incongruent image!")
-            thisExp.addData("Congr/Incongr", "Congruent")
+            thisExp.addData("Congr/Incongr", "Incongruent")
             thisExp.addData("Reward", 1)
             time_h = 6.0;
             time_a = 0.0;
