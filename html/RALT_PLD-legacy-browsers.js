@@ -3241,12 +3241,14 @@ function feedbackRoutineBegin(snapshot) {
         if(weighted_random([true, false], [0.85, 0.15])){
             //congruent
             thisExp.addData("Congr/Incongr", "Congruent")
+            thisExp.addData("Reward", 1)
             console.log("Congruent image!")
             time_h = 6.0;
             time_a = 0.0;
         } else {
             //incongruent
             thisExp.addData("Congr/Incongr", "Incongruent")
+            thisExp.addData("Reward", 0)
             console.log("Incongruent image!")
             time_h = 0.0;
             time_a = 6.0;
@@ -3255,11 +3257,15 @@ function feedbackRoutineBegin(snapshot) {
      if(weighted_random([true, false], [0.85, 0.15])){
             //congruent
             console.log("Congruent image!")
+            thisExp.addData("Congr/Incongr", "Congruent")
+            thisExp.addData("Reward", 0)
             time_h = 0.0;
             time_a = 6.0;
         } else {
             //incongruent
             console.log("Incongruent image!")
+            thisExp.addData("Congr/Incongr", "Congruent")
+            thisExp.addData("Reward", 1)
             time_h = 6.0;
             time_a = 0.0;
             }     
